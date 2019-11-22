@@ -1,0 +1,122 @@
+<div class='header'>
+	<div class='nav inline'>
+		<h1>&#9776;</h1>
+		<div class='nav-icon-helper'>Main menu</div>
+	</div>
+	<div class='home-icon inline'>
+		<img class='docs-icon' src="https://9to5google.com/wp-content/uploads/sites/4/2016/08/google-docs-icon.png?w=1000">
+		<h1 class='inline'><span>D</span>ocs</h1>
+	</div>
+		
+	<div class='search-container inline'>
+		<div class='search-button-container inline'>
+			<img src='https://image.flaticon.com/icons/png/512/55/55369.png'>
+		</div>
+		<input type='text' name='' class='search' placeholder='Search'>
+	</div>
+
+	<div class='app-container inline'>
+		<div class='app-circle inline'>
+			<img class='apps' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLLOt8r18EIUJ3RzUg-lVfflY_bIPK34nfWXZdlK8_yIsJOvWG">
+			<div class='apps-helper'>Google apps</div>
+		</div>
+		<div class='user-circle inline'></div>
+	</div>
+</div>
+
+<!-- Templates Container -->
+<div class='new-docs'>
+	<div class='nd-container'>
+		<div class='nd-header'>
+			<div class='align-left inline'>
+				Start a new document 			
+			</div>
+			<div class='align-right inline'>
+				<div class='template-gallery-container inline'>
+					Template gallery
+				</div>
+				
+				<div class='separator inline'></div>
+				
+				<div class='hide-templates-container inline'>
+					<img class='hide-templates' src='https://image.flaticon.com/icons/png/512/64/64576.png'>		
+				</div>
+			</div>
+		</div>
+		<div class='nd-body'>
+			<div class='templates inline'>
+				<img src='https://ssl.gstatic.com/docs/templates/thumbnails/docs-blank-googlecolors.png' (click)='newBlankDocument()'>
+				<div class='temp-title'>Blank</div>
+			</div>
+			<div class='templates inline'>
+				<img src='https://ssl.gstatic.com/docs/templates/thumbnails/1sU-PkDNWXs52qVV_ujI2lk-S370udkGd5E5SNqZh2Wg_400_3.png'>
+				<div class='temp-title'>Resume</div>
+				<div class='temp-description'>Serif</div>
+			</div>
+			<div class='templates inline'>
+				<img src='https://ssl.gstatic.com/docs/templates/thumbnails/1Kt_YsonekD4k0eXrVqdcDEOkv08MQXBa_wlEHGV02Xs_400_3.png'>
+				<div class='temp-title'>Resume</div>
+				<div class='temp-description'>Coral</div>
+			</div>
+			<div class='templates inline'>
+				<img src='https://ssl.gstatic.com/docs/templates/thumbnails/10e8_E36oj6_LuCRzckBFX_9oqbCHntmYB-jxB5U9gsw_400_2.png'>
+				<div class='temp-title'>Letter</div>
+				<div class='temp-description'>Spearmint</div>
+			</div>
+			<div class='templates inline'>
+				<img src='https://ssl.gstatic.com/docs/templates/thumbnails/1XykI9TfWo4IoUqGLjQ-D8NIU4jZ1Ml9OI8-Euj5FrA0_400_3.png'>
+				<div class='temp-title'>Project Proposal</div>
+				<div class='temp-description'>Tropic</div>
+			</div>
+			<div class='templates inline'>
+				<img src='https://ssl.gstatic.com/docs/templates/thumbnails/1TojfPV3jurwEV2RpmVqnCCCR4z9g2eQBZ40XTHPBqk8_400_3.png'>
+				<div class='temp-title'>Brochure</div>
+				<div class='temp-description'>Geometric</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Header for recent/already created docs -->
+<div class='recent-docs-header'>
+	<div class='title'>Recent documents</div>
+	<div class='ownership'>
+		Owned by anyone
+		<div class='triangle'></div>
+	</div>
+	<div class='icons'>
+		<div class='icon-container'>
+			<img class='' src='https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_view_list_48px-512.png'>		
+		</div>
+		<div class='icon-container'>
+			<img class='' src='https://www.materialui.co/materialIcons/av/sort_by_alpha_black_192x192.png'>
+		</div>
+		<div class='icon-container'>
+			<img class='' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPu-hBLB8PNtBYxavRBOqgxQTwrJjOJ-SaUkFIk-Qus9xzGSeDCQ'>			
+		</div>
+	</div>
+</div>
+
+<!-- For Loops that shows all docs already created -->
+<!-- $event.stopPropagation prevents open(doc) from running on click -->
+<div class='recent-docs-container'>
+	<div class='rd-container'>
+		<div class='rd' *ngFor='let doc of documents; let i = index' (click)='openDoc(doc)' [attr.data-id]='doc._id'>
+			<!-- Wrapping <pre> around the body content preserves the spacing -->
+			<div class='rd-body'><pre>{{ doc.body }}</pre></div>
+			<div class='rd-footer'>
+				<div class='doc-title'>{{ doc.title }}</div>
+				<div class='doc-options-container'>
+					<img class='doc-image inline' src='https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico'>
+					<div class='doc-created-at'>Created {{ doc.createdAt | date:'MMM d, y'}} </div>
+					<div class='doc-buttons' (click)='openOptions(doc); $event.stopPropagation()'><img src='https://image.flaticon.com/icons/png/512/64/64576.png'></div>
+				</div>
+				<div class='doc-buttons-container' (click)='$event.stopPropagation()'>
+					<div class='doc-button' (click)='renameDoc(doc); $event.stopPropagation()'><div class='t-icon inline'>T<span>T</span></div>Rename</div>
+					<div class='doc-button' (click)='removeDoc(doc._id, i); $event.stopPropagation()'><img src='http://cdn.onlinewebfonts.com/svg/img_104856.png'>Remove</div>
+					<div class='doc-button' (click)='openInNewTab(doc._id); $event.stopPropagation()'><img src='https://static.thenounproject.com/png/299638-200.png'>Open in new tab</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

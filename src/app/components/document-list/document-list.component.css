@@ -1,0 +1,478 @@
+* {
+  margin: 0 auto;
+}
+.inline {
+  display: inline-block;
+  vertical-align: top;
+}
+body {
+  min-width: 800px;
+}
+div.header {
+  top: 0;
+  width: 100%;
+  padding-top: 5px;
+  height: 60px;
+  min-width: 850px;
+  font-family: sans-serif;
+  display: flex;
+  position: fixed;
+  background-color: #fff;
+}
+  div.header div h1 {
+    color: #5F6368;
+    font-size: 22px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  div.header div.nav  {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-right: 0px;
+  }
+  div.header div.nav-icon-helper {
+    font-family: 'Open Sans',sans-serif;
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    margin-top: -7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #4E5254;
+    background-color: #4E5254;
+    border-radius: 5px;
+    font-weight: 600;
+    display: none;
+  }
+  div.header div.nav:hover div.nav-icon-helper {
+    display: block;
+    transition-timing-function: ease-out;
+  }
+    div.header div.nav h1 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left: -8px;
+      width: 48px;
+      height: 48px;
+      padding: 4px;
+      font-size: 22px;
+      text-align: center;
+    }
+    div.header div.nav:hover {
+      border: 1px solid #F0F0F0;
+      background-color: #F0F0F0;
+      cursor: pointer;
+    }
+  div.header div.home-icon {
+    cursor: pointer;
+    margin-left: 0px;
+  }  
+    div.header div.home-icon h1 {
+      /*font-family: 'Open Sans',sans-serif;*/
+      font-size: 20px;  
+      font-weight: 300;
+      margin-top: 12px;
+      margin-left: 3px;
+    }
+      div.header div.home-icon h1 span {
+        font-size: 22px;
+      }
+    div.header img.docs-icon {
+      width: 50px;
+    }
+  div.header div.search-container {
+    margin-top: 3px;
+    margin-left: 35px;
+    background-color: #F1F3F4;
+    height: 48px;
+    border: 1px solid #F1F3F4;
+    border-radius: 8px;
+    max-width: 700px;
+    width: 50%;
+    flex-grow: 2;
+  }
+    div.header div.search-container div.search-button-container {
+      border-radius: 50%;
+      border: 1px solid transparent;
+      width: 40px;
+      height: 40px;
+      margin-top: 3px;
+      margin-left: 10px;
+    }
+    div.header div.search-container div.search-button-container:hover {
+      border: 1px solid #E3E5E6;
+      background-color: #E3E5E6;
+      cursor: pointer;
+    }
+      div.header div.search-container div.search-button-container img {
+        width: 20px;
+        height: 20px;
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+      div.header div.search-container input.search {
+        background-color: #F1F3F4;
+        border: 1px solid #F1F3F4;
+        background-image:none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        color: #ABACAD;
+        line-height: 44px;
+        font-size: 15px;
+        margin-left: 8px;
+      }
+      @media only screen and (max-width: 300px) {
+        div.header div.search-container input.search {
+          outline: 2px solid green;
+        } 
+      }
+  div.header div.app-container {
+    float: right;
+    margin-top: 7px;
+    margin-right: 0px;
+  }
+    div.header div.app-container div.app-circle {
+      width: 38px;
+      height: 38px;
+      margin-left: 5px;
+      margin-right: 6px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+    }
+    div.header div.app-container div.app-circle:hover {
+      border: 1px solid #F0F0F0;
+      background-color: #F0F0F0;
+      cursor: pointer;
+    }
+      div.header div.app-container img.apps {
+        margin-top: 11px;
+        margin-left: 11px;
+        width: 16px;
+      }
+      div.header div.app-container div.apps-helper {
+        background-color: #4E5254;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        width: 75px;
+        margin-top: 13px;
+        margin-left: -26px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        padding-right: 5px;
+        border: 1px solid #4E5254;
+        border-radius: 5px;
+        display: none;
+      }
+      div.header div.app-container div.app-circle:hover div.apps-helper {
+        display: block;
+      }
+    div.header div.app-container div.user-circle {
+      width: 34px;
+      height: 34px;
+      margin-left: 5px;
+      margin-right: 12px;
+      border-radius: 50%;
+      background-image: url('https://animals.net/wp-content/uploads/2018/09/Australian-Shepherd-2-650x425.jpg');
+      background-size: contain;
+      border: 3px solid #fff;
+    }
+    div.header div.app-container div.user-circle:hover {
+      border: 3px solid #F0F0F0;
+      cursor: pointer;
+    } 
+div.new-docs {
+  margin-top: 65px;
+  height: 300px;
+  display: flex;
+  background-color: #F1F3F4;
+}
+  div.new-docs div.nd-container {
+    min-width: 450px;
+  }
+    div.new-docs div.nd-container div.nd-header {
+      height: 64px;
+      font-family: 'Open Sans',sans-serif;
+      margin-left: 8px;
+      line-height: 70px;
+      font-size: 14px;
+    }
+      div.nd-header div.align-left {
+        font-size: 15px;
+      }
+      div.nd-header div.align-right {
+        float: right;
+      }
+        div.nd-header div.align-right div.template-gallery-container {
+          line-height: 38px;
+          height: 38px;
+          margin-top: 14px;
+          padding-left: 10px;
+          padding-right: 10px;
+          border: 1px solid transparent;
+          border-radius: 5px;
+          font-weight: 600;
+        }
+        div.nd-header div.align-right div.template-gallery-container:hover {
+          border: 1px solid #BDC1C6;
+          background-color: #BDC1C6;
+          cursor: pointer;
+        }
+        div.nd-header div.align-right div.separator {
+          margin-top: 15px;
+          margin-left: 8px;
+          margin-right: 8px;
+          border-left:1px solid #BDC1C6;
+          height: 35px;
+        }
+          div.nd-header div.align-right div.hide-templates-container {
+            width: 34px;
+            height: 34px;
+            margin-top: 13px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+          }
+            div.nd-header div.align-right div.hide-templates-container:hover {
+              border: 1px solid #BDC1C6;
+              background-color: #BDC1C6;
+              cursor: pointer;
+            }
+            div.nd-header div.hide-templates-container img.hide-templates {
+              width: 15px;
+              margin-left: 10px; 
+              margin-bottom: 15px;
+            }
+    div.new-docs div.nd-container div.nd-body {
+      margin-top: 10px;
+      height: 100%;
+      width: 850px;
+    }
+      div.nd-container div.nd-body div.templates {
+        width: 118px;
+        height: 194px;
+        text-align: left;
+        margin-right: 21px;
+      }      
+        div.nd-container div.nd-body div.templates img {
+          width: 100%;
+          height: 152px;
+          border-radius: 4px;
+          border: 1px solid #DADCE0;
+          cursor: pointer;
+        }
+        div.nd-container div.nd-body div.templates img:hover {
+          border: 1px solid #679FFF;
+        }
+        div.nd-container div.nd-body div.templates div.temp-title {
+          margin-top: 5px;
+          margin-left: 2px;
+          font-size: 14px;
+          font-family: 'Roboto', sans-serif;
+        }
+        div.nd-container div.nd-body div.templates div.temp-description {
+          margin-top: 3px;
+          font-weight: 300;
+          font-size: 14px;
+          font-family: 'Roboto', sans-serif;
+          color: #5f6368;
+        }
+div.recent-docs-header {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 14px;
+  width: 850px;
+  font-family: 'Roboto', sans-serif;
+}
+  div.recent-docs-header div.title {
+    font-size: 16px;
+    flex-grow: 0.4;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+  div.recent-docs-header div.ownership {
+    font-size: 14px;
+    margin-top: 8px;
+    display: flex;
+    border: 1px solid transparent;
+    height: 25px;
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 30px;
+    color: #414549;
+    font-weight: 600;
+  }
+  div.recent-docs-header div.ownership:hover {
+    cursor: pointer;
+    border: 1px solid #F1F3F4;
+    background-color: #F1F3F4;
+  }
+    div.recent-docs-header div.ownership div.triangle:before {
+      margin-top: 7px;
+      margin-left: 10px;
+      content: '';
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #000;
+      border-bottom: 5px solid transparent;
+    }
+
+  div.recent-docs-header div.icons {
+    margin-right: 20px;
+    margin-bottom: 15px;
+    display: flex;
+  }
+    div.recent-docs-header div.icons div.icon-container img {
+      width: 20px;
+      margin-top: 6px;
+      margin-left: 7px;
+    }
+    div.recent-docs-header div.icons div.icon-container {
+      margin-left: 6px;
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      border: 1px solid transparent;
+    }
+    div.recent-docs-header div.icons div.icon-container:hover {
+      border: 1px solid #F0F0F0;
+      background-color: #F0F0F0;
+      cursor: pointer;
+    }
+
+div.recent-docs-container {
+  width: 850px;
+  height: 100vh;
+}
+  div.rd-container {
+    margin-left: 0px;
+  }
+    div.rd {
+      vertical-align: top;
+      display: inline-block;
+      margin-top: 7px;
+      margin-bottom: 8px;
+      margin-left: 0px;
+      margin-right: 15px;
+      height: 280px;
+      width: 195px;
+      border: 1px solid #DFE1E5;
+      border-radius: 3px;
+      background-image: linear-gradient(to bottom, white, #FBFBFB);
+    }
+    div.rd:hover {
+      border: 1px solid #1A73E8;
+      cursor: pointer;
+    }
+      div.rd div.rd-body {
+        width: 100%;
+        height: 205px;
+        font-size: 4px;
+        font-family: sans-serif;
+      }
+      div.rd div.rd-footer {
+        border-top: 1px solid #DFE1E5;
+        width: 100%;
+        z-index: 9;
+        background-color: #fff;
+        height: 74px;
+        font-family: 'Roboto', sans-serif;
+      }
+        div.rd div.doc-title {
+          font-size: 15px;
+          margin-top: 15px;
+          margin-left: 15px;
+          padding-right: 15px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        div.rd div.doc-options-container {
+          display: flex;
+          margin-top: 7px;
+          margin-left: 15px;
+        }
+          div.rd div.doc-options-container img.doc-image {
+            height: 19px;          
+            width: 19px;          
+            margin-right: 8px;
+            margin-left: 0px;
+          }
+          div.rd div.doc-options-container div.doc-created-at {
+            margin-top: 3px;  
+            margin-left: 0px;  
+            color: #5F6368;
+            font-size: 12px;
+          }
+          div.rd div.doc-buttons {
+            margin-right: 6px;
+            margin-top: -5px;
+            height: 30px;
+            width: 30px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+          }
+          div.rd div.doc-buttons:hover {
+            border: 1px solid #F0F0F0;
+            background-color: #F0F0F0;
+            cursor: pointer;
+          }
+            div.rd div.doc-options-container div.doc-buttons img {
+              width: 15px;
+              padding-top: 7px;
+              padding-left: 8px;
+              user-select: none;
+            }
+        div.rd div.doc-buttons-container {
+          padding-top: 8px;
+          margin-left: 60px;
+          font-size: 15px;
+          width: 220px;
+          height: 140px;
+          cursor: auto;
+          position: relative;
+          border-radius: 5px;
+          border: 1px solid #F0F0F0;
+          z-index: 9;
+          background-color: white;
+          -webkit-box-shadow: -1px 2px 5px -1px rgba(125,125,125,1);
+          -moz-box-shadow: -1px 2px 5px -1px rgba(125,125,125,1);
+          box-shadow: -1px 2px 5px -1px rgba(125,125,125,1);
+          display: none;
+        }
+          div.rd div.doc-buttons-container div.doc-button {
+            user-select: none;
+            padding-top: 12px;  
+            cursor: pointer;
+            padding-bottom: 12px;  
+          }
+          div.rd div.doc-buttons-container div.doc-button:hover {
+            background-color: #F0F0F0;
+          }
+            div.rd div.doc-buttons-container div.doc-button div.t-icon {
+              font-family: 'Roboto', sans-serif;
+              font-weight: bold;
+              font-size: 17px;
+              margin-left: 16px;
+            }
+              div.rd div.doc-buttons-container div.doc-button div.t-icon span {
+                font-size: 12px;
+                margin-right: 23px;
+              }
+            div.rd div.doc-buttons-container div.doc-button img {
+              margin-left: 16px;
+              margin-right: 23px;
+              width: 16px;
+              height: 17px;
+            }

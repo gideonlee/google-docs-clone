@@ -1,0 +1,11 @@
+<div class='rename-container'>
+	<div class='modal-title' mat-dialog-title>Rename</div>
+	<form class='rename-form' [formGroup]='renameDocForm' (ngSubmit)='rename()'>
+		<label class='rename-label'>Please enter a new name for the item:</label>
+		<input class='rename-input' type='text' onFocus='this.select()' formControlName='title'>
+		<div class='buttons-container'>
+			<button class='cancel-button' (click)='close()'>Cancel</button>
+			<button id='rename' class='confirm-button' type='submit'>OK</button>
+		</div>
+	</form>
+</div>

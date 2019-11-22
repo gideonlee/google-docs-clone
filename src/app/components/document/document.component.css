@@ -1,0 +1,371 @@
+* {
+	margin: 0 auto;
+}
+.inline {
+	display: inline-block;
+	vertical-align: top;
+}
+div.header-container {
+	overflow: hidden;	
+	position: relative;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+div.header {
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	position: fixed;
+	display: 	flex;
+	width: 100%;
+	min-width: 700px;
+	overflow: hidden;
+	border-bottom: 1px solid #DADCE0;
+	z-index: 9;
+}
+	div.header div.home-icon img.docs-icon {
+		width: 50px;
+		margin-top: 6px;		
+		margin-left: 12px;
+		margin-right: 5px;
+		margin-bottom: 4px;
+	}
+		div.header div.home-icon div.home-icon-helper {
+			border: 2px solid #000;
+			font-family: 'Open Sans',sans-serif;
+			font-size: 12px;
+			padding-left: 7px;
+			padding-right: 7px;
+			margin-left: -1px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			position: fixed;
+			border-radius: 2px;
+			font-weight: 400;
+			display: none;
+		}
+		div.header div.home-icon div.home-icon-helper:before {
+			content: "";
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid #2A2A2A;
+			margin-top: -15px;
+			margin-left: 24px;
+		}
+		div.header div.home-icon:hover div.home-icon-helper {
+			display: block;
+			background-color: #2A2A2A;
+			color: white;
+			transition-timing-function: ease-out;
+		}
+	div.header div.docs-title-bar-container {
+		vertical-align: top;
+		margin-top: 8px;
+		display: inline-block;
+		width: 100%;
+	}
+		div.docs-title-bar-container div.docs-title-bar-input {
+			border: 2px solid transparent;
+			border-radius: 2px;
+			font-family: 'Roboto', sans-serif;
+			font-size: 18px;
+			padding-left: 6px;
+			padding-right: 12px;
+			color: #000;
+			height: 23px;
+			overflow-y: none;
+		}
+		div.header div.docs-title-bar-container div.docs-title-bar-input:hover {
+			border: 2px solid #E5E5E5;
+		}
+		div.header div.docs-title-bar-container div.docs-title-bar-input:focus {
+			border: 2px solid #1A73E8;
+			border-radius: 4px;
+		}
+			div.header div.docs-title-bar-buttons img.star-icon {
+				width: 15px;
+				margin-left: 8px;
+				margin-top: 5px;
+				cursor: pointer;
+			}
+			div.header div.docs-title-bar-buttons img.star-icon:hover {
+				width: 15px;
+				margin-left: 8px;
+				margin-top: 5px;
+				cursor: pointer;
+			}
+			div.header div.docs-title-bar-buttons img.folder-icon {
+				width: 15px;
+				margin-left: 12px;
+				cursor: pointer;
+			} 
+			div.menu-buttons {
+				
+			}
+				div.menu-buttons div.buttons {
+					padding-left: 5px;
+					padding-right: 5px;
+					border: 1px solid transparent;
+					font-family: sans-serif;
+					font-size: 14px;
+					padding-top: 3px;
+					padding-bottom: 3px;
+				}
+				div.menu-buttons div.buttons:hover {
+					cursor: pointer;
+					border: 1px solid #F1F3F4;
+					background-color: #F1F3F4;
+					border-radius: 5px;
+				}
+		div.top-right-buttons {
+			float: right;
+			display: flex;
+			margin-top: 13px;
+   		margin-right: 0px;
+		}
+			div.top-right-buttons div.comments-button {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				border: 1px solid transparent;	
+				background-color: #fff;
+				margin-right: 12px;
+			}
+			div.top-right-buttons div.comments-button:hover {
+				border: 1px solid #F0F0F0;
+				background-color: #F0F0F0;
+				cursor: pointer;
+			}
+				div.top-right-buttons div.comments-button img.comments-icon {
+					margin-left: 6px;
+					margin-top: 8px;
+				}
+			div.top-right-buttons div.share-button {
+					border: 1px solid #1A73E8;
+					background-color: #1A73E8;
+					color: #fff;
+					border-radius: 4px;
+					font-size: 14px;
+					padding: 9px 16px 10px 12px;
+					margin-right: 12px;
+					width: 65px;
+					height: 16px;
+			}
+			div.top-right-buttons div.share-button:hover { 
+				border: 1px solid #2B7DE9;
+				background-color: #2B7DE9;
+				cursor: pointer;
+			}
+					div.top-right-buttons div.share-button img.lock-icon {
+							width: 15px;
+							margin-right: 7px;
+					}
+			div.top-right-buttons div.user-circle {
+			  width: 34px;
+			  height: 34px;
+			  margin-left: 5px;
+			  margin-right: 16px;
+			  border-radius: 50%;
+			  background-image: url('https://animals.net/wp-content/uploads/2018/09/Australian-Shepherd-2-650x425.jpg');
+			  background-size: contain;
+			  border: 3px solid #fff;
+			}
+			div.top-right-buttons div.user-circle:hover {
+      	border: 3px solid #F0F0F0;
+      	cursor: pointer;
+   	 	} 
+div.docs-primary-tools {
+	position: fixed;
+	overflow: hidden;
+	padding-left: 20px;
+	margin-top: 64px;
+	height: 38px;
+	width: 100%;
+	background-color: #fff;
+	border-top: 1px solid #DADCE0;
+	border-bottom: 1px solid #DADCE0;
+	/*z-index: 9;*/
+}
+	div.docs-primary-tools div.primary-tool-container {
+		margin-top: 7px;
+		margin-left: 1px;
+		margin-right: 1px;
+		width: 24px;
+		height: 24px;
+		border: 1px solid transparent;
+		border-radius: 2px;
+	}
+	div.docs-primary-tools div.primary-tool-container:hover {
+		background-color: #F1F3F4; 
+		border: 1px solid #F1F3F4;
+		cursor: pointer;
+	}
+		div.docs-primary-tools img.icon {
+			width: 20px;
+			margin-left: 2px;
+			margin-top: 2px;
+		}
+			div.docs-primary-tools img.paint-format-button {
+				width: 26px;
+				margin-left: -2px;
+				margin-top: -1px;
+			}
+	div.divider {
+		height: 20px;
+		width: 1px;
+		border-left: 1px solid #DADCE0;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-top: 10px;
+	}
+	div.zoom-container {
+		border: 1px solid transparent;
+		border-radius: 2px;
+		margin-top: 6px;
+		height: 26px;
+		width: 60px;
+	}
+	div.zoom-container:hover {
+		background-color: #F1F3F4; 
+		border: 1px solid #F1F3F4;
+		cursor: pointer;
+	}
+		div.zoom-container div.zoom-button {
+			margin-left: 9px;
+			margin-top: 5px;
+			padding-right: 7px;
+			font-size: 13px;
+			color: #4A4D51;
+			border-right: 1px solid transparent;
+		}
+		div.zoom-container:hover div.zoom-button {
+			border-right: 1px solid #D4D5D6;
+		}
+		div.down-arrow-container {
+			border-left: 1px solid transparent;
+		}
+		div.down-arrow-container:hover {
+			border-left: 1px solid #4A4D51;
+		}
+			div.down-arrow-container div.down-arrow:before {
+				content: "";
+				margin-left: 1px;
+				margin-top: 11px;
+				width: 0px;
+				height: 0px;
+				position: absolute;
+				border-left: 4px solid transparent;
+				border-right: 4px solid transparent;
+				border-top: 4px solid #2A2A2A;
+				border-bottom: 4px solid transparent;
+			}
+	div.text-style-container {
+		border: 1px solid transparent;
+		border-radius: 2px;
+		margin-top: 6px;
+		height: 26px;
+		width: 100px;
+	}
+	div.text-style-container:hover {
+		background-color: #F1F3F4; 
+		border: 1px solid #F1F3F4;
+		cursor: pointer;		
+	}
+		div.text-style-container div.text-style-button {
+			font-size: 13px;
+			margin-left: 9px;
+			margin-top: 5px;
+			margin-right: 11px;
+		}
+
+	div.font-family-container {
+		border: 1px solid transparent;
+		border-radius: 2px;
+		margin-top: 6px;
+		height: 26px;
+		width: 80px;
+	}
+	div.font-family-container:hover {
+		background-color: #F1F3F4; 
+		border: 1px solid #F1F3F4;
+		cursor: pointer;		
+	}
+		div.font-family-container div.font-family-button {
+			font-size: 13px;
+			margin-left: 9px;
+			margin-top: 5px;
+			margin-right: 30px;			
+		}
+	div.font-size-container {
+		border: 1px solid transparent;
+		border-radius: 2px;
+		margin-top: 6px;
+		height: 26px;
+		width: 57px;
+	}
+	div.font-size-container:hover {
+		background-color: #F1F3F4; 
+		border: 1px solid #F1F3F4;
+		cursor: pointer;		
+	}
+		div.font-size-container:hover div.font-size-button {
+			border-right: 1px solid #D4D5D6;
+		}
+		div.font-size-container div.font-size-button {
+			border-right: 1px solid transparent;
+			font-size: 13px;
+			margin-left: 9px;
+			margin-top: 5px;
+			padding-right: 20px;			
+		}
+		div.highlight-container img.highlight-button {
+			width: 28px;
+			margin-left: -2px;
+			margin-top: -2px;
+		}
+div.horizontal-ruler-container {
+	position: fixed;
+	overflow: hidden;
+	height: 14px;
+	width: 100%;
+	display: flex;
+	margin-top: 102px;
+	background-color: #E8EAED;
+	border-top: 1px solid #DADCE0;
+	border-bottom: 1px solid #DADCE0;
+	z-index: 9;
+}
+div.document-container {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	width: 100%;
+	margin-top: 116px;
+	background-color: #F8F9FA;
+	z-index: 1;
+	display: inline-block;
+	padding-top: 10px;
+}
+	div#document {
+		white-space: pre-wrap;
+		/*margin-top: 10px;*/
+		/*content: '';*/
+		/*padding-top: 16px;*/
+		/*margin-bottom: 10px;*/
+		background-color: #fff;
+		overflow-wrap: break-word;
+		width: 826px;
+		height: 1056px;
+		border: 1px solid #EDEEF0;
+		outline: none;
+		box-shadow: 0 1px 3px 1px rgba(60,64,67,.15);
+	}
+

@@ -1,0 +1,113 @@
+<div class='header-container'>
+	<div class='header'>
+		<div class='home-icon inline'>
+			<a routerLinkActive='active' routerLink='/documents'><img class='docs-icon' src="https://9to5google.com/wp-content/uploads/sites/4/2016/08/google-docs-icon.png?w=1000"></a>
+			<div class='home-icon-helper'>Docs home</div>
+		</div>
+		<div class='docs-title-bar-container inline'>
+			<div class='inline'>		
+				<form class='inline'>
+					<div id='rename' class='docs-title-bar-input' contenteditable='true' spellcheck='false' autocomplete='off' (focus)='renameFormFocused()' (focusout)='rename()'>{{ doc.title }}</div>
+				</form>
+				<div class='docs-title-bar-buttons inline'><img class='star-icon' [src]='imgSrc' (mouseenter)='checkStarredOnHover()' (mouseleave)='checkStarredOnUnhover()' (click)='toggleStarred()'><img class='folder-icon' src='assets/icons/folder-icon.png'></div>
+				<div class='menu-buttons'>
+					<div class='buttons inline'>File</div>
+					<div class='buttons inline'>Edit</div>
+					<div class='buttons inline'>View</div>
+					<div class='buttons inline'>Insert</div>
+					<div class='buttons inline'>Format</div>
+					<div class='buttons inline'>Tools</div>
+					<div class='buttons inline'>Add-ons</div>
+					<div class='buttons inline'>Help</div>
+				</div>
+			</div>
+		</div>
+
+		<div class='top-right-buttons inline'>
+			<div class='comments-button inline'><img class='comments-icon inline' src='assets/icons/comments-icon.png'></div>
+			<div class='share-button inline'><img class='lock-icon inline' src='assets/icons/lock-icon.png'> Share</div>
+			<div class='user-circle inline'></div>
+		</div>
+	</div>
+
+	<div class='docs-primary-tools'>
+		<div class='undo-container primary-tool-container inline'>
+			<img class='icon undo-button' [src]='undoSrc'>
+		</div>
+		<div class='redo-container primary-tool-container inline'>
+			<img class='icon redo-button' [src]='redoSrc'>
+		</div>
+		<div class='printer-container primary-tool-container inline'>
+			<img class='icon printer-button' [src]='printerSrc'>
+		</div>
+		<div class='spellcheck-container primary-tool-container inline'>
+			<img class='icon spellcheck-button' [src]='spellcheckSrc'>
+		</div>
+		<div class='paint-format-container primary-tool-container inline'>
+			<img class='icon paint-format-button' [src]='paintFormatSrc'>
+		</div>
+
+		<div class='divider inline'></div>
+
+		<div class='zoom-container inline'>
+			<div class='zoom-button inline'>100%</div>
+			<div class='down-arrow-container inline'>
+				<div class='down-arrow'></div>
+			</div>
+		</div>
+
+		<div class='divider inline'></div>
+
+		<div class='text-style-container inline'>
+			<div class='text-style-button inline'>Normal text</div>
+			<div class='down-arrow-container inline'>
+				<div class='down-arrow'></div>
+			</div>
+		</div>
+
+		<div class='divider inline'></div>
+
+		<div class='font-family-container inline'>
+			<div class='font-family-button inline'>Arial</div>
+			<div class='down-arrow-container inline'>
+				<div class='down-arrow'></div>
+			</div>
+		</div>
+
+		<div class='divider inline'></div>
+
+		<div class='font-size-container inline'>
+			<div class='font-size-button inline'>11</div>
+			<div class='down-arrow-container inline'>
+				<div class='down-arrow'></div>
+			</div>
+		</div>
+
+		<div class='divider inline'></div>
+
+		<div class='bold-container primary-tool-container inline'>
+			<img class='icon bold-button' [src]='boldSrc'>
+		</div>
+		<div class='italic-container primary-tool-container inline'>
+			<img class='icon italic-button' [src]='italicSrc'>
+		</div>
+		<div class='underline-container primary-tool-container inline'>
+			<img class='icon underline-button' [src]='underlineSrc'>
+		</div>
+		<div class='text-color-container primary-tool-container inline'>
+			<img class='icon text-color-button' [src]='textColorSrc'>
+		</div>
+		<div class='highlight-container primary-tool-container inline'>
+			<img class='icon highlight-button' [src]='highlightSrc'>
+		</div>
+
+		<div class='divider inline'></div>
+	</div>
+
+	<div class='horizontal-ruler-container'></div>
+</div>
+
+
+<div class='document-container'>
+	<div id='document' spellcheck='false' autocomplete='off' contenteditable='true' (focus)='focusDoc()' (focusout)='unfocusDoc()'></div>
+</div>

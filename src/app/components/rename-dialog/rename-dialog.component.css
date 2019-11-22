@@ -1,0 +1,71 @@
+div.rename-container {
+	width: 347px;
+}
+	div.modal-title {
+		font-size: 21px;
+	}
+	label.rename-label {
+		color: #5F6368;
+		display: block;
+		margin-bottom: 24px;
+	}
+		input.rename-input {
+			width: 343px;
+			border: 1px solid #5f6368;
+			border-radius: 4px;
+			display: block;
+			font-size: 13px;
+			height: 25px;
+			padding: 1px 8px;
+			width: 25em;
+			box-shadow: none;
+		}
+		input.rename-input:focus {
+			border: 1px solid #1A73E8;
+		}
+		form.rename-form div.buttons-container {
+			display: flex;
+			margin-top: 25px;
+			justify-content: flex-end;
+		}
+			form.rename-form button {
+				border-radius: 4px;
+				font-size: 14px;
+				height: 36px;
+				line-height: 16px;
+				padding: 9px 24px 11px 24px;
+				margin-left: 16px;
+				letter-spacing: 0.5px;
+				box-shadow: none;
+				cursor: pointer;
+			}
+			form.rename-form button.cancel-button {
+				background-color: #fff;
+				border: 1px solid #DADCE0;
+				color: #1A73E8;
+			}
+				form.rename-form button.cancel-button:hover {
+					background-color: #F8FBFF;
+					border: 1px solid #CCE0FC;
+					color: #333333;
+				}
+				form.rename-form button.cancel-button:active {
+					background-color: #E1ECFE;
+					border: 1px solid #E1ECFE;
+					color: #383839;
+				}
+			form.rename-form button.confirm-button {
+				background-color: #1A73E8;
+				border: 1px solid #1A73E8;
+				color: #fff;
+				width: 92px;
+			}
+				form.rename-form button.confirm-button:hover {
+					background-color: #2B7DE9;
+					border: 1px solid #2B7DE9;
+				}
+				form.rename-form button.confirm-button:active {
+					background-color: #63A0EF;
+					border: 1px solid #63A0EF;
+				}
+				

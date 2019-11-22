@@ -1,0 +1,23 @@
+/* Changes default theme css. */
+::ng-deep .custom-restore-delete-container .mat-dialog-container {
+	background-color: #202124;
+	bottom: 0px;
+	padding: 20px;
+	box-shadow: none;
+}
+/* Allows Scrolling Body when Modal is open. */
+::ng-deep .cdk-global-scrollblock {
+	position: static;
+	width: auto;
+}
+div.restore-delete-container {
+	width: 280px;
+	margin-left: 5px;
+	background-color: #202124;
+	display: flex;
+}
+	div.restore-delete-container div.grey-font {
+		font-size: 14px;
+		color: #DADCE0;
+		width: 232px;
+	}

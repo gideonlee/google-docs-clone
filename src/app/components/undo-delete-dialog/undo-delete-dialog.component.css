@@ -1,0 +1,28 @@
+/* Changes default theme css. */
+::ng-deep .custom-undo-delete-container .mat-dialog-container {
+	background-color: #202124;
+	bottom: 0px;
+	padding: 20px;
+	box-shadow: none;
+}
+/* Allows Scrolling Body when Modal is open. */
+::ng-deep .cdk-global-scrollblock {
+	position: static;
+	width: auto;
+}
+div.undo-container {
+	width: 280px;
+	margin-left: 5px;
+	background-color: #202124;
+	display: flex;
+}
+	div.undo-container div.grey-font {
+		font-size: 14px;
+		color: #DADCE0;
+		width: 232px;
+	}
+	div.undo-container div.undo-button {
+		font-size: 16px;
+		color: #488EF6;
+		cursor: pointer;
+	}
