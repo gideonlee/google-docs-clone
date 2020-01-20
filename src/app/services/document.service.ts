@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-// import { Socket } from 'ngx-socket-io';
 import { Document } from '../models/document';
 
 @Injectable({
